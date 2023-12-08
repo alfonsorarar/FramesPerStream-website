@@ -1,0 +1,229 @@
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding: 4rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --main-color: #3F0071;
+    --second-color: #150050;
+    --text-color: #E3651D ;
+    --bg-color:  #000000;
+    --box-shadow: #EFE1D1;
+}
+img{
+    width: 100%;
+}
+body{
+    background-image: url(imgs/bball.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: linear-gradient(135deg, #EFE1D1, #6DB9EF);
+    color: var(--text-color);
+}
+section{
+    padding: 5.5rem 0 3rem;
+    margin: 0;
+}
+.container{
+    max-width: 1068px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.headq-text{
+    padding-top: 180px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.headq-text h1{
+    font-size: 6.3rem;
+}
+.headq-text h3{
+    font-size: 4rem;
+    margin-bottom: 5px;
+}
+header{
+    display: block;
+    width: 100%;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 35px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+.logo .bx{
+    font-size: 25px;
+    color: var(--text-color);
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+    padding: 8px 17px;
+    color: var(--box-shadow);
+}
+.navlist a:hover{
+    color: var(--main-color);
+}
+.btn{
+    padding: 14px 42px;
+    padding-top: 12px;
+    background: var(--text-color);
+    color: var(--box-shadow);
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.zbtn{
+    padding: 14px 42px;
+    padding-top: 12px;
+    display: inline-block;
+    background: transparent;
+    color: var(--box-shadow);
+    border-radius: 0.5rem;
+}
+.zbtn:hover{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.footer{
+    background: transparent;
+    color: var(--text-color);
+    max-height: fit-content;
+    border-radius: 5rem 0 0 0;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+    gap: 2rem;
+}
+.footer-container h2{
+    font-size: 1.8rem;
+    color: var(--box-shadow);
+    font-weight: 500;
+}
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+.footer-box h3{
+    color: #000000;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+.footer-box a{
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+.footer-box a:hover{
+    color: var(--bg-color);
+}
+.social a{
+    padding: 14px 14px;
+    font-size: 50px;
+    margin-right: 1rem;
+}
+.social a:hover{
+    color: var(--box-shadow);
+}
+.copyright{
+    padding: 20px;
+    text-align: center;
+    color: var(--text-color);
+    background: #000000;
+}
+/* responsive*/
+@media (max-width: 1080px) {
+    header{
+        padding: 13px 3%;
+    }
+    .container{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+@media (max-width: 880px) {
+    header{
+        padding: 13px 3%;
+    }
+    section {
+        padding: 4rem 0 3rem;
+    }
+    .nominees-container{
+        grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+        gap: 1rem;
+        padding: 0 10px;
+    }
+    .footer-container{
+        grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+        gap: 1rem;
+    }
+}
+@media (max-width: 768px){
+    .nav{
+        padding: 10px 0;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .navlist{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--second-color);
+        text-align: center;
+        clip-path: circle(0% at 100% 1%);
+        transition: 0.6s;
+    }
+    .navlist a{
+        display: block;
+        margin: 1rem;
+        padding: 20px;
+        color: var(--bg-color);
+    }
+    .navlist a:hover{
+        background: var(--main-color);
+        color: var(--bg-color);
+        transition: 0.2s;
+    }
+    #menu:checked ~ .navbar{
+        clip-path: circle(144% at 100% 1%);
+    }
+}
+@media (max-width: 442px){
+    .nominees-container{
+        padding: 0;
+    }
+    .footer{
+        border-radius: 3rem 0 0 0;
+    }
+}
+
